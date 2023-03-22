@@ -1,0 +1,119 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4230,        111]
+NotebookOptionsPosition[      3381,         90]
+NotebookOutlinePosition[      3785,        106]
+CellTagsIndexPosition[      3742,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Using Taylor series to approximate integral", "Text",
+ CellChangeTimes->{{3.8881952958969245`*^9, 
+  3.888195325325609*^9}},ExpressionUUID->"02c141d8-5581-4e6a-90af-\
+590538f98bfd"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"Sin", "[", "x", "]"}], "/", "x"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"approximation", "=", " ", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8881954286021876`*^9, 3.8881954597398186`*^9}, {
+   3.8881954960694747`*^9, 3.8881955216021857`*^9}, 3.8882130715896745`*^9, {
+   3.8882131635402536`*^9, 3.888213166074708*^9}, 3.888268133610227*^9, {
+   3.888268263359578*^9, 3.8882682955159144`*^9}, {3.8882684892335577`*^9, 
+   3.8882685048268323`*^9}, {3.8882685429693174`*^9, 
+   3.8882685466375685`*^9}, {3.8882694989191155`*^9, 3.888269593738456*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"0b3dc6fd-2268-4a5b-8157-6a4966696db2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "0"}], ",", " ", 
+    RowBox[{"i", " ", "<=", " ", "100"}], ",", " ", 
+    RowBox[{"i", "++"}], ",", " ", 
+    RowBox[{"approximation", " ", "+=", "  ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Derivative", "[", "i", "]"}], "[", "f", "]"}], "[", "0.1", 
+       "]"}], "*", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"(", "0.1", ")"}], ")"}], "^", "i"}], "/", 
+       RowBox[{"Factorial", "[", "i", "]"}]}]}]}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQXXD9tabHjzeO+3nD9UH0zfU9ziA6bc9+NxA950ZV
+CIg+nRiXCKKlQpTzQfTtSTdLQfQpiytNIJon+dNkEP18gthiEL3IpWAtiLY7
+U7MDREcx7toLomUsLB6A6BPLo8B0Nev3lyBagfn7KxCts4vpG4hWzZQC0wJ3
+bJk9gfQfm2ghEB0yP10VRAvll4PpirJFmiBa+NVaLRBttOm7IYj2uJ5oCtbH
+//AwiOZr+30SRN8yfrQkEEhfqUpYDqLl+lpXg+hfNS7rQPS6/FWbQXTIw7Jt
+IJrt2ttdIDpeavo+EP2Fp/skiHbSmwOmPe2vnAPREiv0LoDorBOSJkEgc8o3
+WIJoAJggxVk=
+  "],
+ CellLabel->"In[15]:=",ExpressionUUID->"04e378cd-b0f6-41d4-bf40-c6aa20ac27e8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", "approximation", "]"}]], "Input",
+ CellChangeTimes->{{3.8882693766822634`*^9, 3.8882693824408665`*^9}, {
+  3.8882873184616394`*^9, 3.8882873460687294`*^9}, {3.8882875196894965`*^9, 
+  3.8882875556511445`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"86ebc97e-0125-4bd4-ada4-6a783fc8f55d"],
+
+Cell[BoxData["0.9933466539753084`"], "Output",
+ CellChangeTimes->{{3.8882875288925858`*^9, 3.8882875568694954`*^9}, 
+   3.888288169104103*^9, {3.8882881999095697`*^9, 3.8882882154272685`*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"33ca2c97-c453-4962-ba6c-e7fbab5f8cb6"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.888287585933069*^9, 3.888287599062249*^9}, 
+   3.888287630462875*^9},ExpressionUUID->"37bf71ed-4b2a-4897-9b03-\
+0d647d6d6454"]
+},
+WindowSize->{1141.2, 568.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b875cfc1-495f-459b-9ab3-0fb86f081314"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 187, 3, 35, "Text",ExpressionUUID->"02c141d8-5581-4e6a-90af-590538f98bfd"],
+Cell[748, 25, 738, 14, 48, "Input",ExpressionUUID->"0b3dc6fd-2268-4a5b-8157-6a4966696db2"],
+Cell[1489, 41, 1078, 27, 28, "Input",ExpressionUUID->"04e378cd-b0f6-41d4-bf40-c6aa20ac27e8"],
+Cell[CellGroupData[{
+Cell[2592, 72, 321, 5, 28, "Input",ExpressionUUID->"86ebc97e-0125-4bd4-ada4-6a783fc8f55d"],
+Cell[2916, 79, 271, 3, 32, "Output",ExpressionUUID->"33ca2c97-c453-4962-ba6c-e7fbab5f8cb6"]
+}, Open  ]],
+Cell[3202, 85, 175, 3, 28, "Input",ExpressionUUID->"37bf71ed-4b2a-4897-9b03-0d647d6d6454"]
+}
+]
+*)
+
